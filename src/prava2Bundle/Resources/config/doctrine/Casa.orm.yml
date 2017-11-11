@@ -1,0 +1,18 @@
+prava2Bundle\Entity\Casa:
+    type: entity
+    table: null
+    repositoryClass: prava2Bundle\Repository\CasaRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        nome:
+            type: string
+            length: '20'
+        colore:
+            type: string
+            length: '20'
+    lifecycleCallbacks: {  }

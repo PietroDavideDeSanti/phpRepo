@@ -1,0 +1,20 @@
+
+prova:
+    resource: "@provaBundle/Controller/"
+    type:     annotation
+    prefix:   /
+    
+prova1:
+    resource: "@provaBundle1/Controller/"
+    type:     annotation
+    prefix:   /
+    
+prava2:
+    resource: "@prava2Bundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+
+app:
+    resource: '@AppBundle/Controller/'
+    type: annotation
