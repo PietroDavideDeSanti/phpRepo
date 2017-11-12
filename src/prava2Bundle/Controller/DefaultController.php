@@ -11,22 +11,11 @@ use Symfony\Component\HttpFoundation\Response;
 class DefaultController extends Controller
 {
     /**
-     * @Route("/")
+     * @Route("/", name="hello_route")
      */
     public function indexAction()
     {   
-        /*
-        $person= new Person();
-        $person->setNome("Pier");
-        $person->setCognome("Des");
-         * */
-         
-       // var_dump($casa);
-        /*
-        $em=$this->getDoctrine()->getManager();
-        $em->persist($casa);
-        $em->flush(); 
-         */
+        
         //considera che fra i : c è resources/view
         return $this->render('prava2Bundle:Default:index.html.twig');
         //return $this->render('default/prova.html.twig');
@@ -38,5 +27,22 @@ class DefaultController extends Controller
     public function indexAction1()
     {   
         return new Response("ciao");
+    }
+    /**
+     * @Route("/ridirectTo")
+     */
+    public function indexAction2()
+    {   
+        return $this->redirectToRoute("hello_route");
+    }
+    
+    /**
+     * @Route("/request")
+     */
+    public function indexAction3(Request $request)
+    {   
+        var_dump($request->getClientIp());
+        die();
+        return $this->redirectToRoute("hello_route");
     }
 }
