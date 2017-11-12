@@ -1,5 +1,5 @@
 <?php
-
+//commento
 namespace prava2Bundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
