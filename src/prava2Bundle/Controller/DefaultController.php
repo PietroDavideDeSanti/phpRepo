@@ -5,12 +5,13 @@ namespace prava2Bundle\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 
 
 class DefaultController extends Controller
 {
     /**
-     * @Route("/prova2Bundle")
+     * @Route("/")
      */
     public function indexAction()
     {   
@@ -29,5 +30,13 @@ class DefaultController extends Controller
         //considera che fra i : c è resources/view
         return $this->render('prava2Bundle:Default:index.html.twig');
         //return $this->render('default/prova.html.twig');
+    }
+    
+     /**
+     * @Route("/response")
+     */
+    public function indexAction1()
+    {   
+        return new Response("ciao");
     }
 }
